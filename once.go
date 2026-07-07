@@ -58,5 +58,5 @@ func (o *Once) doSlowE(f func() error) error {
 
 type noCopy struct{}
 
-func (noCopy) Lock()   {}
-func (noCopy) Unlock() {}
+func (*noCopy) Lock()   {}
+func (*noCopy) Unlock() {}
